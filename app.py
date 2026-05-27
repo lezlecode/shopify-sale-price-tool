@@ -237,6 +237,11 @@ st.caption(
 with st.expander("🔑 Shopify credentials", expanded=True):
     store_input = st.text_input("Store domain", placeholder="yourstore.myshopify.com")
     token_input = st.text_input("Admin API access token", type="password", placeholder="shpat_…")
+    st.caption(
+        "Don't have a token? In your Shopify Admin go to **Settings → Apps → Develop apps**, "
+        "create a Custom App, enable the **read_products** and **write_products** scopes, "
+        "install it, then copy the Admin API access token from the *API credentials* tab."
+    )
 
 # ── 2. Metafield settings ───────────────────────────────────────────────────────
 with st.expander("⚙️ Metafield settings", expanded=True):
